@@ -26,7 +26,7 @@ resource "aws_route53_record" "txt" {
   name    = aws_ses_domain_identity.default.id
   type    = "TXT"
   ttl     = "600"
-  records = [var.spf]
+  records = var.spf
 }
 
 resource "aws_ses_domain_identity" "default" {
