@@ -60,8 +60,8 @@ variable "region" {
 }
 
 variable "spf" {
-  type        = string
-  default     = "v=spf1 include:amazonses.com -all"
+  type        = list
+  default     = ["v=spf1 include:amazonses.com -all"]
   description = "DNS SPF record value"
 }
 
